@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1 style="text-align:center">Catch Love ❤️</h1>
+
+<script>
+let score = 0;
+
+function heart() {
+    let h = document.createElement("div");
+    h.innerHTML = "💖";
+    h.style.position = "absolute";
+    h.style.left = Math.random()*window.innerWidth + "px";
+    h.style.top = "0px";
+
+    h.onclick = () => {
+        score++;
+        h.remove();
+
+        if(score >= 5){
+            document.body.innerHTML = "<h1>I love you my chota chammach ❤️</h1>";
+        }
+    };
+
+    document.body.appendChild(h);
+
+    let fall = setInterval(()=>{
+        h.style.top = parseInt(h.style.top)+5+"px";
+        if(parseInt(h.style.top)>window.innerHeight){
+            h.remove();
+            clearInterval(fall);
+        }
+    },50);
+}
+
+setInterval(heart,800);
+</script>
+
+</body>
+</html>
