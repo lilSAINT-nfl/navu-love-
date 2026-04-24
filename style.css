@@ -1,70 +1,100 @@
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont;
-    background: black;
     color: white;
+    overflow-x: hidden;
+    background: black;
 }
 
-/* Background tulip glow */
+/* 🌷 Tulip Background */
 .bg {
     position: fixed;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at 30% 30%, #ff4d6d22, transparent),
-                radial-gradient(circle at 70% 70%, #ff1e4d22, transparent);
+    background: url('https://images.unsplash.com/photo-1526045612212-70caf35c14df');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.25) blur(8px);
+    z-index: -2;
+}
+
+/* 🌑 Dark overlay */
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, transparent, black 80%);
     z-index: -1;
 }
 
-/* Glassmorphism card */
+/* 💎 Glass Card */
 .glass {
-    margin: 100px auto;
+    margin: 120px auto;
     width: 80%;
     max-width: 500px;
     padding: 40px;
     text-align: center;
 
-    background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(25px);
 
-    border-radius: 20px;
-    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 25px;
+    border: 1px solid rgba(255,255,255,0.2);
 
-    animation: fade 1.5s ease;
+    box-shadow: 0 0 40px rgba(255, 77, 109, 0.3);
+
+    animation: float 4s ease-in-out infinite;
 }
 
+/* 💖 Heading */
 h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     color: #ff4d6d;
+    text-shadow: 0 0 20px #ff4d6d;
 }
 
+/* ✨ Subtitle */
+p {
+    opacity: 0.8;
+}
+
+/* 💕 Button */
 button {
     margin-top: 20px;
-    padding: 12px 20px;
+    padding: 14px 24px;
     border: none;
-    background: #ff4d6d;
+    background: linear-gradient(45deg, #ff4d6d, #ff1e4d);
     color: white;
-    border-radius: 12px;
+    border-radius: 15px;
     cursor: pointer;
+    font-size: 1rem;
+
+    box-shadow: 0 0 20px #ff4d6d;
+    transition: 0.3s;
 }
 
 button:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
-/* Blog cards */
+/* 📝 Blog Card */
 .blog {
     width: 80%;
-    margin: 20px auto;
-    padding: 20px;
+    margin: 40px auto;
+    padding: 25px;
 
-    background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(20px);
 
-    border-radius: 15px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.15);
+
+    box-shadow: 0 0 30px rgba(255, 77, 109, 0.2);
 }
 
-/* Animation */
-@keyframes fade {
-    from { opacity: 0; transform: translateY(30px);}
-    to { opacity: 1; transform: translateY(0);}
+/* ✨ Floating animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
 }
