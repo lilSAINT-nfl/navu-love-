@@ -30,3 +30,7 @@ setInterval(() => {
 
     setTimeout(() => heart.remove(), 6000);
 }, 500);
+
+document.body.addEventListener("click", () => {
+    document.getElementById("music").play();
+}, { once: true });
