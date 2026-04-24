@@ -14,7 +14,7 @@ body {
     background: url('tulips.jpg');
     background-size: cover;
     background-position: center;
-    filter: brightness(0.25) blur(8px);
+    filter: brightness(0.4) blur(6px);
     z-index: -2;
 }
 
