@@ -6,17 +6,12 @@
 <title>For You ❤️</title>
 
 <link rel="stylesheet" href="style.css">
-
 </head>
 
-<audio id="music" autoplay loop>
-  <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
-</audio>
-
 <body>
+
 <div class="bg"></div>
 <div class="overlay"></div>
-<div class="bg"></div>
 
 <div class="glass">
     <h1>For My Chota Chammach 💖</h1>
@@ -25,6 +20,21 @@
     <button onclick="goGame()">Play Something 💕</button>
 </div>
 
+<!-- 💌 Hidden Message -->
+<div class="secret" onclick="revealMessage()">
+    There’s something for you 💌
+</div>
+
+<div id="hiddenMessage">
+    <h2>I love you ❤️</h2>
+    <p>
+        These 3 months have been the most beautiful part of my life.  
+        You make everything feel lighter, calmer, and happier.  
+        I don’t say it enough, but I truly love you.
+    </p>
+</div>
+
+<!-- 📝 Blog -->
 <div id="blogs"></div>
 
 <script src="script.js"></script>
