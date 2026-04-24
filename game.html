@@ -1,44 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>For You 💖</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body style="text-align:center; padding-top:100px;">
 
-<h1 style="text-align:center">Catch Love ❤️</h1>
+<h1>Find the right heart 💖</h1>
+<p>Only one of them knows how much I love you...</p>
+
+<div id="gameArea"></div>
 
 <script>
-let score = 0;
+const gameArea = document.getElementById("gameArea");
 
-function heart() {
-    let h = document.createElement("div");
-    h.innerHTML = "💖";
-    h.style.position = "absolute";
-    h.style.left = Math.random()*window.innerWidth + "px";
-    h.style.top = "0px";
+// create hearts
+for (let i = 0; i < 6; i++) {
+    const heart = document.createElement("span");
+    heart.innerHTML = "💖";
+    heart.style.fontSize = "40px";
+    heart.style.margin = "15px";
+    heart.style.cursor = "pointer";
 
-    h.onclick = () => {
-        score++;
-        h.remove();
-
-        if(score >= 5){
-            document.body.innerHTML = "<h1>I love you my chota chammach ❤️</h1>";
+    heart.onclick = () => {
+        if (i === 3) { // correct heart
+            document.body.innerHTML = `
+                <h1>I love you ❤️</h1>
+                <h2>my chota chammach 💕</h2>
+                <p>You found the one that feels like you.</p>
+            `;
+        } else {
+            heart.style.opacity = "0.3";
         }
     };
 
-    document.body.appendChild(h);
-
-    let fall = setInterval(()=>{
-        h.style.top = parseInt(h.style.top)+5+"px";
-        if(parseInt(h.style.top)>window.innerHeight){
-            h.remove();
-            clearInterval(fall);
-        }
-    },50);
+    gameArea.appendChild(heart);
 }
-
-setInterval(heart,800);
 </script>
 
 </body>
