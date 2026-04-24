@@ -144,3 +144,30 @@ body::after {
     background: radial-gradient(circle at center, transparent 60%, rgba(255, 77, 109, 0.25));
     z-index: -1;
 }
+.gallery {
+    text-align: center;
+    margin: 60px auto;
+}
+
+.gallery h2 {
+    color: #ff4d6d;
+    margin-bottom: 20px;
+}
+
+.photos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.photos img {
+    width: 200px;
+    border-radius: 15px;
+    transition: 0.3s;
+    box-shadow: 0 0 20px rgba(255,77,109,0.3);
+}
+
+.photos img:hover {
+    transform: scale(1.1);
+}
