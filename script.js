@@ -18,6 +18,11 @@ function goGame() {
     window.location.href = "game.html";
 }
 
+function revealMessage() {
+    document.getElementById("hiddenMessage").style.display = "block";
+}
+
+/* 💖 Floating hearts */
 setInterval(() => {
     const heart = document.createElement("div");
     heart.className = "heart";
@@ -30,7 +35,3 @@ setInterval(() => {
 
     setTimeout(() => heart.remove(), 6000);
 }, 500);
-
-document.body.addEventListener("click", () => {
-    document.getElementById("music").play();
-}, { once: true });
