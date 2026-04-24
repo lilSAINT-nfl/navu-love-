@@ -35,3 +35,9 @@ setInterval(() => {
 
     setTimeout(() => heart.remove(), 6000);
 }, 500);
+
+window.addEventListener("scroll", () => {
+    const scroll = window.scrollY;
+    document.querySelector(".bg").style.transform =
+        `translateY(${scroll * 0.2}px) scale(1.05)`;
+});
