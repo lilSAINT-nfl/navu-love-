@@ -1,8 +1,7 @@
 const blogs = [
   {
     title: "Happy 3 Months ❤️",
-    content: "Happy 3 months darling ❤️ These past three months have genuinely been the best time of my life, and I hope you feel the same way. I know I’m not perfect, but I promise I’ll always try to be better for you. I’ll always do my best to keep you happy, comfortable, and cared for — because you truly mean everything to me."
-  }
+    content: "Happy 3 months darling ❤️ These past three months have genuinely been the best time of my life, and I hope you feel the same way. I know I’m not perfect, but I promise I’ll always try to be better for you. I’ll always do my best to keep you happy, comfortable, and cared for — because you truly mean everything to me."  }
 ];
 
 const container = document.getElementById("blogs");
